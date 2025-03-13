@@ -196,7 +196,7 @@
 
 
     <script>
-        const API_URL = 'http://localhost:3000/productos';
+        const API_URL = 'https://api-shop-rtm6.onrender.com/productos';
         document.addEventListener('DOMContentLoaded', cargarProductos);
         document.getElementById('productoForm').addEventListener('submit', guardarProducto);
         document.getElementById('ventaForm').addEventListener('submit', realizarVenta);
@@ -226,7 +226,7 @@
             });
         }
 
-        const VENTAS_API_URL = 'http://localhost:3000/ventas'; // URL para obtener las ventas
+        const VENTAS_API_URL = 'https://api-shop-rtm6.onrender.com/ventas'; // URL para obtener las ventas
 
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('[data-bs-target="#ventasModal"]').addEventListener('click', cargarVentas);
@@ -295,14 +295,14 @@
                 return;
             }
 
-            const facturaURL = `http://localhost:3000/factura/${ventaIdActual}`; // Endpoint de la factura
+            const facturaURL = `https://api-shop-rtm6.onrender.com/factura/${ventaIdActual}`; // Endpoint de la factura
             window.open(facturaURL, '_blank'); // Abrir el PDF en una nueva pestaña
         });
 
         document.getElementById('descargarReporteVentas').addEventListener('click', descargarReporteVentas);
 
         function descargarReporteVentas() {
-            const reporteURL = 'http://localhost:3000/reporte-ventas'; // Endpoint del reporte
+            const reporteURL = 'https://api-shop-rtm6.onrender.com/reporte-ventas'; // Endpoint del reporte
             window.open(reporteURL, '_blank'); // Abrir el archivo en una nueva pestaña o descargarlo
         }
 
@@ -313,7 +313,7 @@
             const productoId = document.getElementById('productoVenta').value; // ID del producto
             const cantidad = document.getElementById('cantidadVenta').value; // Cantidad del producto
 
-            const url = 'http://localhost:3000/ventas'; // Endpoint para registrar ventas
+            const url = 'https://api-shop-rtm6.onrender.com/ventas'; // Endpoint para registrar ventas
             const ventaData = {
                 cliente_id: clienteId,
                 producto_id: productoId,
@@ -351,7 +351,7 @@
             }
         }
 
-        const USUARIOS_API_URL = 'http://localhost:3000/clientes'; // Ruta para registrar usuarios
+        const USUARIOS_API_URL = 'https://api-shop-rtm6.onrender.com/clientes'; // Ruta para registrar usuarios
 
         // Capturamos el evento "submit" del formulario
         document.getElementById('usuarioForm').addEventListener('submit', registrarUsuario);
